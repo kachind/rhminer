@@ -21,7 +21,7 @@ if(RH_NO_SSE4)
 	add_definitions(-DRHMINER_NO_SSE4)
 else()
 	message(STATUS "ENABLING SSe4 intrinsics")
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -msse4.1")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -march=knl -O2")
 endif(RH_NO_SSE4)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMake")
